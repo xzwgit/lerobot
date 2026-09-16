@@ -37,6 +37,7 @@ from lerobot.policies.pretrained import PreTrainedPolicy  # noqa: E402
 from lerobot.processor import (  # noqa: E402
     AbsoluteActionsProcessorStep,
     RelativeActionsProcessorStep,
+    bind_relative_anchor,
 )
 from lerobot.utils.feature_utils import (  # noqa: E402
     build_dataset_frame,
@@ -416,6 +417,7 @@ def test_sync_anchor_is_pinned_across_a_chunk():
             return self._action_queue.popleft().unsqueeze(0)
 
     policy = _ChunkingPolicy()
+    bind_relative_anchor(policy, preprocessor)
     engine = SyncInferenceEngine(
         policy=policy,
         preprocessor=preprocessor,

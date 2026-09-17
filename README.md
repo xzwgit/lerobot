@@ -1,3 +1,6 @@
+> [!NOTE]
+> Fork of [huggingface/lerobot](https://github.com/huggingface/lerobot) kept alongside [xzwgit/openpi (branch `torch2.14-cu130-blackwell`)](https://github.com/xzwgit/openpi/tree/torch2.14-cu130-blackwell) — the π₀/π0.5 reference implementation switched to torch 2.14.0+cu130 with Blackwell (RTX 5090 / RTX PRO 6000) support.
+
 <p align="center">
   <img alt="LeRobot, Hugging Face Robotics Library" src="./media/readme/lerobot-logo-thumbnail.png" width="100%">
 </p>

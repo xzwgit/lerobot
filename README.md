@@ -1,4 +1,5 @@
 > [!NOTE]
+> **Tested on torch 2.14.0+cu130 + RTX PRO 6000 Blackwell (sm_120): PASS** — ACT, π0 and π0.5 forward/backward, optimizer steps and `torch.compile` all work; no Blackwell/CUDA-13/torch-2.14 breakage found. Caveats: this repo pins `torch>=2.7,<2.12.0`, so a normal install downgrades torch to 2.11—install with `uv pip install -e . --no-deps` and manage deps manually to keep 2.14; `torchcodec` (<0.12) cannot coexist with torch 2.14, so video-dataset decoding is unavailable on this stack; python >=3.12 required; first-time `torch.compile` of the 4B VLA can exceed 300 s.
 > Fork of [huggingface/lerobot](https://github.com/huggingface/lerobot) kept alongside [xzwgit/openpi (branch `torch2.14-cu130-blackwell`)](https://github.com/xzwgit/openpi/tree/torch2.14-cu130-blackwell) — the π₀/π0.5 reference implementation switched to torch 2.14.0+cu130 with Blackwell (RTX 5090 / RTX PRO 6000) support.
 
 <p align="center">
